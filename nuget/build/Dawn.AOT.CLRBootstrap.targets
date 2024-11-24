@@ -1,0 +1,5 @@
+﻿<Project>
+  <ItemGroup>
+    <NativeLibrary Include="$(MSBuildThisFileDirectory)..\runtimes\native\lib\CLRBootstrap.obj" />
+  </ItemGroup>
+</Project>

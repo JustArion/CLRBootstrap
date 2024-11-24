@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Dawn.AOT.CLRBootstrap</id>
+    <version>1.0.0</version>
+    <authors>arion</authors>
+    <description>Safely run the .NET runtime on .dll load</description>
+    <readme>docs/readme.md</readme>
+  </metadata>
+  <files>
+    <file src="docs\readme.md" target="docs\" />
+    <file src="runtimes\native\lib\CLRBootstrap.obj" target="runtimes\native\lib" />
+    <file src="build\Dawn.AOT.CLRBootstrap.targets" target="build\" />
+  </files>
+</package>
