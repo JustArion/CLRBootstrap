@@ -1,1 +1,1 @@
-Allows the CLR to safely initialize on DllMain as `Init`
+Allows the CLR to safely initialize on DllMain as `Init` on a new thread
