@@ -1,6 +1,5 @@
 #define ulong unsigned long
 #define EXPORT extern "C" __declspec(dllexport)
-#define var const auto
 #include <exception>
 #include <string>
 #include <windows.h>
@@ -34,15 +33,15 @@ void Cleanup(const PLOADER_INFORMATION lpParameter, const HANDLE mainThread)
 
 ulong WINAPI DllThread(const PLOADER_INFORMATION lpParameter)
 {
-    var loaderInfo = *lpParameter;
-    var mainThread = OpenThread(THREAD_SUSPEND_RESUME, false, loaderInfo.MainThreadId);
+    const auto loaderInfo = *lpParameter;
+    const auto mainThread = OpenThread(THREAD_SUSPEND_RESUME, false, loaderInfo.MainThreadId);
 
     if (mainThread != nullptr)
     {
         SuspendThread(mainThread);
     }
 
-    var address = GetProcAddress(loaderInfo.Module, "Init");
+    const auto address = GetProcAddress(loaderInfo.Module, "Init");
 
     if (address == nullptr)
     {
@@ -50,7 +49,7 @@ ulong WINAPI DllThread(const PLOADER_INFORMATION lpParameter)
         return 1;
     }
 
-    var init = reinterpret_cast<InitFunc>(address);  // NOLINT(clang-diagnostic-cast-function-type-strict)
+    const auto init = reinterpret_cast<InitFunc>(address);  // NOLINT(clang-diagnostic-cast-function-type-strict)
     try
     {
         init(lpParameter);
@@ -71,12 +70,12 @@ EXPORT bool APIENTRY DllMain(const HMODULE hModule, const ulong fdwReason)
 
     DisableThreadLibraryCalls(hModule);
     const LPDWORD threadId = nullptr;
-    var loaderInfo = new(LOADER_INFORMATION)
+    const auto loaderInfo = new(LOADER_INFORMATION)
     {
         hModule, GetCurrentThreadId(), GetThreadPriority(GetCurrentThread())
     };
     // ReSharper disable once CppTooWideScopeInitStatement
-    var dllThread = CreateThread(nullptr,  0, reinterpret_cast<LPTHREAD_START_ROUTINE>(DllThread), loaderInfo, 0, threadId);  // NOLINT(clang-diagnostic-cast-function-type-strict)
+    const auto dllThread = CreateThread(nullptr,  0, reinterpret_cast<LPTHREAD_START_ROUTINE>(DllThread), loaderInfo, 0, threadId);  // NOLINT(clang-diagnostic-cast-function-type-strict)
 
     if (dllThread != nullptr)
     {
