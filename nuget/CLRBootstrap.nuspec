@@ -2,14 +2,20 @@
 <package>
   <metadata>
     <id>Dawn.AOT.CLRBootstrap</id>
-    <version>1.0.0</version>
-    <authors>arion</authors>
+    <version>1.0.1</version>
+    <authors>JustArion</authors>
     <description>Safely run the .NET runtime on .dll load</description>
     <readme>docs/readme.md</readme>
+    <dependencies>
+      <group targetFramework="net9.0">
+        
+      </group>
+    </dependencies>
   </metadata>
   <files>
     <file src="docs\readme.md" target="docs\" />
     <file src="runtimes\native\lib\CLRBootstrap.obj" target="runtimes\native\lib" />
     <file src="build\Dawn.AOT.CLRBootstrap.targets" target="build\" />
+    <file src="lib\net9.0\Dawn.AOT.dll" target="lib\net9.0\"/>
   </files>
 </package>
