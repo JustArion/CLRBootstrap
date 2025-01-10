@@ -1,13 +1,11 @@
 ﻿namespace Dawn.AOT;
 
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
 [StructLayout(LayoutKind.Sequential)]
-[SuppressMessage("ReSharper", "UnusedType.Global")]
-public readonly struct BootstrapInformation
+public readonly struct LoaderInformation
 {
-    public readonly nint HINSTANCE;
-    public readonly ulong MainThreadId;
-    public readonly int MainThreadPriority;
+    public readonly HINSTANCE Module;
+    public readonly uint MainThreadId;
+    public readonly THREAD_PRIORITY MainThreadPriority;
 }
