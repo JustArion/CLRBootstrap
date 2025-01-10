@@ -7,12 +7,16 @@ using Dawn.AOT;
 
 internal static class EntryPoint
 {   
-    internal static BootstrapInformation _loaderInfo;
+    internal static LoaderInformation _loaderInfo;
     
     [UnmanagedCallersOnly(EntryPoint = nameof(Init))]
-    public static unsafe void Init(BootstrapInformation* loaderInfo)
+    public static unsafe void Init(LoaderInformation* loaderInfo)
     {
         _loaderInfo = *loaderInfo;
     }
 }
 ```
+
+Build from Source Requirements:
+- cl
+- dotnet 9 sdk
