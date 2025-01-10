@@ -1,0 +1,125 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {},
+    ".NETCoreApp,Version=v9.0/win-x64": {
+      "Dawn.AOT/1.0.0": {
+        "dependencies": {
+          "Vanara.PInvoke.Kernel32": "4.0.4",
+          "Vanara.PInvoke.User32": "4.0.4"
+        },
+        "runtime": {
+          "Dawn.AOT.dll": {}
+        }
+      },
+      "Vanara.Core/4.0.4": {
+        "runtime": {
+          "lib/net8.0-windows7.0/Vanara.Core.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        },
+        "resources": {
+          "lib/net8.0-windows7.0/fr/Vanara.Core.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "Vanara.PInvoke.Gdi32/4.0.4": {
+        "dependencies": {
+          "Vanara.Core": "4.0.4",
+          "Vanara.PInvoke.Shared": "4.0.4"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Vanara.PInvoke.Gdi32.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        }
+      },
+      "Vanara.PInvoke.Kernel32/4.0.4": {
+        "dependencies": {
+          "Vanara.Core": "4.0.4",
+          "Vanara.PInvoke.Shared": "4.0.4"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Vanara.PInvoke.Kernel32.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        }
+      },
+      "Vanara.PInvoke.Shared/4.0.4": {
+        "dependencies": {
+          "Vanara.Core": "4.0.4"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Vanara.PInvoke.Shared.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        }
+      },
+      "Vanara.PInvoke.User32/4.0.4": {
+        "dependencies": {
+          "Vanara.Core": "4.0.4",
+          "Vanara.PInvoke.Gdi32": "4.0.4",
+          "Vanara.PInvoke.Kernel32": "4.0.4",
+          "Vanara.PInvoke.Shared": "4.0.4"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Vanara.PInvoke.User32.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dawn.AOT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vanara.Core/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nw80UaQg9vaDc4DUu2RSLtJvcQMzz3Ys5okYNYKt2QIzaZMn2oBdKxrx0s3RA6RwqZ4wEW6/1Wyp6pJAI2G5JQ==",
+      "path": "vanara.core/4.0.4",
+      "hashPath": "vanara.core.4.0.4.nupkg.sha512"
+    },
+    "Vanara.PInvoke.Gdi32/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IzEAVwQ205cd/+2VwkWeG+oe7x792Oadc0mo2aqw4Lf0pYrd9v/C4KMetObaXVrY0v4wJoMY/P17vYvYFHZZ0Q==",
+      "path": "vanara.pinvoke.gdi32/4.0.4",
+      "hashPath": "vanara.pinvoke.gdi32.4.0.4.nupkg.sha512"
+    },
+    "Vanara.PInvoke.Kernel32/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VdyvgUaPuTL5GQEhnfzC3rOskbXVBipdMsBmTpiEa9tEj2Gk7QkNs8Kfki+9/x/BUwnIn4c0/XT+HTJ1x5yAnw==",
+      "path": "vanara.pinvoke.kernel32/4.0.4",
+      "hashPath": "vanara.pinvoke.kernel32.4.0.4.nupkg.sha512"
+    },
+    "Vanara.PInvoke.Shared/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b14beVrX7644+NwbXlHMwZnbeHfpmfE1RvJgC9Bqcmx7WfeFpEAg1u4Bv5aQTvIIqTFYa0x5zwy7kSEwM1ol5Q==",
+      "path": "vanara.pinvoke.shared/4.0.4",
+      "hashPath": "vanara.pinvoke.shared.4.0.4.nupkg.sha512"
+    },
+    "Vanara.PInvoke.User32/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d9Wuop6LuE2mIkUpVDSMdXsbJqSFgMXMrBgYMOy29mQZzRMcbqp7bczeC9oxziAZsmQoO2nZ8FCf/SjZOKiGiw==",
+      "path": "vanara.pinvoke.user32/4.0.4",
+      "hashPath": "vanara.pinvoke.user32.4.0.4.nupkg.sha512"
+    }
+  }
+}
