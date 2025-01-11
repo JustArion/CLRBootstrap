@@ -1,4 +1,4 @@
-﻿namespace Dawn.AOT.CoreLib.X86.Threading;
+﻿namespace Dawn.AOT.Threading;
 
 using System.Collections.Concurrent;
 using System.Runtime.InteropServices.ComTypes;

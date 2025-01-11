@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PublishAot>true</PublishAot>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -15,6 +16,10 @@
     <ItemGroup>
         <PackageReference Include="Vanara.PInvoke.Kernel32" Version="4.0.4" />
         <PackageReference Include="Vanara.PInvoke.User32" Version="4.0.4" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Dawn.AOT.Roslyn\Dawn.AOT.Roslyn.csproj" OutputItemType="Analyzer"/>
     </ItemGroup>
 
 </Project>
